@@ -2,12 +2,12 @@
   "name": "@brngdsn/swarm-js",
   "version": "0.2.0",
   "description": "A lightweight, stateless multi-agent orchestration framework for Node.js",
-  "main": "./src/index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"No tests configured\""
   },
-  "keywords": ["ai agents", "openai"],
+  "keywords": ["ai agents", "openai", "javascript"],
   "author": "brn.gdsn@gmail.com",
   "license": "MIT",
   "dependencies": {
@@ -15,6 +15,14 @@
     "dotenv": "^16.4.7",
     "openai": "latest",
     "ora": "^8.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/brngdsn/swarm-js/issues"
+  },
+  "homepage": "https://github.com/brngdsn/swarm-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brngdsn/swarm-js.git"
   },
   "engines": {
     "node": ">=20.8.0"
