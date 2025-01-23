@@ -2,7 +2,7 @@
 
 ![SwarmJS Logo](./assets/swarm-js-logo.png)
 
-**Swarm JS** is an experimental framework for orchestrating multiple AI "agents" that can transfer control to each other and call functions (or "tools") in a chat-based workflow. It uses the [OpenAI Node.js library][openai-npm], along with a few utilities, to facilitate multi-step reasoning and delegation across different agents with specialized instructions.
+**SwarmJS** is an experimental framework for orchestrating multiple AI "agents" that can transfer control to each other and call functions (or "tools") in a chat-based workflow. It uses the [OpenAI Node.js library][openai-npm], along with a few utilities, to facilitate multi-step reasoning and delegation across different agents with specialized instructions.
 
 ![SwarmJS Logo](./assets/swarm-js.gif)
 
@@ -43,13 +43,13 @@
 npm install swarm-js
 ```
 
-> **Note**: Swarm JS depends on the [OpenAI Node.js library][openai-npm], which is installed as a dependency. Make sure to have a valid OpenAI API key to use its features.
+> **Note**: SwarmJS depends on the [OpenAI Node.js library][openai-npm], which is installed as a dependency. Make sure to have a valid OpenAI API key to use its features.
 
 ---
 
 ## Usage
 
-Below is a quick overview of how to set up and use Swarm JS in your Node.js or TypeScript project.
+Below is a quick overview of how to set up and use SwarmJS in your Node.js or TypeScript project.
 
 ### 1. Creating Agents
 
@@ -73,7 +73,7 @@ const triage_agent = new Agent({
 
 ### 2. Defining Tools
 
-"Tools" are just JavaScript functions, but you can annotate them with a `.doc` property to describe what they do. **Swarm JS** automatically converts each tool into a JSON schema for function calling in the OpenAI API.  
+"Tools" are just JavaScript functions, but you can annotate them with a `.doc` property to describe what they do. **SwarmJS** automatically converts each tool into a JSON schema for function calling in the OpenAI API.  
 
 A tool can optionally transfer conversation control by returning another `Agent` instance.
 
@@ -301,13 +301,13 @@ async function run_demo_loop(initial_agent: Agent): Promise<void>;
    - Custom instructions
    - A list of "tool" functions, each annotated with `.doc` for usage hints
 
-2. **Parameter Extraction**: Swarm JS automatically converts these tools into JSON schemas that the OpenAI function-calling API can understand.  
+2. **Parameter Extraction**: SwarmJS automatically converts these tools into JSON schemas that the OpenAI function-calling API can understand.  
    - It does this by analyzing the function signature and any default parameter values or docstrings.
 
 3. **Conversation Loop**:
    - The user messages (along with system instructions) are sent to OpenAI.
    - OpenAI may request to call a tool function by name, with arguments derived from the conversation.
-   - Swarm JS executes the tool function and appends the result to the conversation.
+   - SwarmJS executes the tool function and appends the result to the conversation.
    - The conversation continues until no more tool calls are requested.
 
 4. **Agent Transfer**: If a tool returns another `Agent` instance, the conversation "transfers" to that agent. Subsequent steps in the conversation use the new agent's instructions and tools.
