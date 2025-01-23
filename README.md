@@ -1,8 +1,10 @@
-# Swarm JS
+# SwarmJS
 
-![SwarmJS Logo](./assets/swarm-js.gif)
+![SwarmJS Logo](./assets/swarm-js-logo.png)
 
 **Swarm JS** is an experimental framework for orchestrating multiple AI "agents" that can transfer control to each other and call functions (or "tools") in a chat-based workflow. It uses the [OpenAI Node.js library][openai-npm], along with a few utilities, to facilitate multi-step reasoning and delegation across different agents with specialized instructions.
+
+![SwarmJS Logo](./assets/swarm-js.gif)
 
 ## Table of Contents
 
